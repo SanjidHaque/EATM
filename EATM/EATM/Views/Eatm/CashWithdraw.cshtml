@@ -1,0 +1,12 @@
+﻿@model int
+@{
+    ViewBag.Title = "CurrentBalanceAfterWithdraw";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>Your current account balance is now @Model BDT</h4>
+
+@using (Html.BeginForm("Options", "Eatm"))
+{
+    <button type="submit" class="btn btn-primary"> Go back to options </button>
+}

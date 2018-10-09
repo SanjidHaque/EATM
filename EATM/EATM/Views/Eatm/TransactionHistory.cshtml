@@ -1,0 +1,15 @@
+﻿@model List<EatmClassLibrary.Transaction>
+@{
+    ViewBag.Title = "TransactionHistory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>TransactionHistory</h2>
+
+@foreach (var transactions in Model)
+{
+
+    <h4> @transactions.Amount</h4>
+
+
+}

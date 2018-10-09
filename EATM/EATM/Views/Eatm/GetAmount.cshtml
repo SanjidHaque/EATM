@@ -1,0 +1,21 @@
+﻿@model int
+@{
+    ViewBag.Title = "GetAmount";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@using (Html.BeginForm("CashWithdraw", "EATM", new { cardNumber = @Model}))
+{
+    <div class="form-group">
+        <label for="amount">Enter your amount for withdraw cash</label>
+        <input type="text" name="amount" />
+    </div>
+    <button type="submit" class="btn btn-primary"> Submit </button>
+}
+
+@using (Html.BeginForm("Options", "EATM", new { cardNumber = @Model }))
+{
+
+    <button type="submit" class="btn btn-primary"> Go back to options </button>
+}

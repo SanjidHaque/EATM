@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "EATM";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("Register", "Eatm"))
+{
+    <button type="submit" class="btn btn-primary">Register</button>
+}
+
+@using (Html.BeginForm("Login", "Eatm"))
+{
+    <button type="submit" class="btn btn-primary">Login</button>
+}

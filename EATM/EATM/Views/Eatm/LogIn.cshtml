@@ -1,0 +1,25 @@
+﻿@model EatmClassLibrary.Account
+@{
+    ViewBag.Title = "Log In";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EATM</h2>
+@using (Html.BeginForm("LogIn", "EATM"))
+{
+    <div class="form-group">
+        <label for="CardNumber">Enter your card number</label>
+        @Html.TextBoxFor(m => m.CardNumber, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        <label for="PinNumber">Enter your pin number</label>
+        @Html.TextBoxFor(m => m.PinNumber, new { @class = "form-control", @type = "password" })
+    </div>
+    <button type="submit" class="btn btn-primary"> Submit </button>
+    <div>
+        @Html.ActionLink("Go back to home page", "Index", "EATM")
+    </div>
+
+
+}
+

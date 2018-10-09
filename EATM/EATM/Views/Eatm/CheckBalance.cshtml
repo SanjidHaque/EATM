@@ -1,0 +1,17 @@
+﻿@model int
+@{
+    ViewBag.Title = "BalanceCheck";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h4> Your Current Balance is @Model BDT</h4>
+@using (Html.BeginForm("Options", "EATM"))
+{
+
+    <button type="submit" class="btn btn-primary"> Go back to options </button>
+
+
+}
+
+

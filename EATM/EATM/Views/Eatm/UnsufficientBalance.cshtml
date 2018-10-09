@@ -1,0 +1,11 @@
+﻿@model int
+@{
+    ViewBag.Title = "LackOfMoney";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4> Sorry! You have only @Model BDT in your account</h4>
+@using (Html.BeginForm("Options", "Eatm"))
+{
+    <button type="submit" class="btn btn-primary"> Go back to options </button>
+}

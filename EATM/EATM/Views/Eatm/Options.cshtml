@@ -1,0 +1,32 @@
+﻿@model int
+
+@{
+    ViewBag.Title = "Options";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Options for user </h2>
+@using (Html.BeginForm("CheckBalance", "Eatm", new { cardNumber = @Model }))
+{
+    <button type="submit" class="btn btn-primary">1. Check your current balance </button>
+
+}
+@using (Html.BeginForm("GetAmount", "Eatm", new { cardNumber = @Model }))
+{
+
+    <button type="submit" class="btn btn-primary">2. Withdraw cash </button>
+
+}
+@using (Html.BeginForm("TransactionHistory", "Eatm", new { cardNumber = @Model }))
+{
+
+    <button type="submit" class="btn btn-primary">3. Show your transaction history </button>
+
+}
+
+@using (Html.BeginForm("Exit", "Eatm", new { cardNumber = @Model }))
+{
+
+    <button type="submit" class="btn btn-primary">4. Exit </button>
+
+}

@@ -1,0 +1,12 @@
+﻿@model int
+@{
+    ViewBag.Title = "Registration Completed";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h4>You have successfully created a new account</h4>
+<h5> Your card number is @Model </h5>
+@using (Html.BeginForm("LogIn", "Eatm"))
+{
+    <button type="submit" class="btn btn-primary"> Log in to your account </button>
+}
